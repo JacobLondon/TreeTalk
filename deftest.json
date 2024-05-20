@@ -1,0 +1,33 @@
+{
+    "::START": {
+        "type": "start",
+        "directive": "::GOTO A1"
+    },
+    "::INCLUDE": [
+        "A1_Diag"
+    ],
+    "A1": {
+        "type": "msg",
+        "msg": "Would you like to go North (1), South (2), or talk (3)?",
+        "opt": {
+            "1": "::GOTO A1_North",
+            "2": "::GOTO A1_South",
+            "3": "::GOTO A1_Diag"
+        }
+    },
+    "A1_North": {
+        "type": "msg",
+        "msg": "Well, now that we're North. Would you like to stay (1) or go South (2)?",
+        "opt": {
+            "1": "::GOTO A1_North",
+            "2": "::GOTO A1_South"
+        }
+    },
+    "A1_South": {
+        "type": "msg",
+        "msg": "Not much here. Go back to beginning? (1)",
+        "opt": {
+            "1": "::GOTO A1"
+        }
+    }
+}

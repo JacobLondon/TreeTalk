@@ -1,0 +1,32 @@
+{
+    "A1_Diag": {
+        "type": "dialogue",
+        "dialogue": [
+            "B: What do you think?",
+            "A: I'm not too sure!",
+            "::GOTO A1_Diag_Choose"
+        ]
+    },
+    "A1_Diag_Choose": {
+        "type": "msg",
+        "msg": "(1) I think it's okay. (2) I disagree.",
+        "opt": {
+            "1": "::GOTO A1_Diag_Agree",
+            "2": "::GOTO A1_Diag_Disagree"
+        }
+    },
+    "A1_Diag_Agree": {
+        "type": "dialogue",
+        "dialogue": [
+            "A: Well that's good to hear! Let's go back home.",
+            "::GOTO A1"
+        ]
+    },
+    "A1_Diag_Disagree": {
+        "type": "dialogue",
+        "dialogue": [
+            "A: Well goodness me! I can't disagree further.",
+            "::GOTO A1"
+        ]
+    }
+}
