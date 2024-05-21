@@ -5,4 +5,7 @@ A tool that interprets JSON files like a script for a text-based video game!
 ```bash
 # Dummy example
 python treetalk.py A1.json
+
+# Silly sailing script
+python treetalk.py Ocean.json
 ```

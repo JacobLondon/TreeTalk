@@ -30,10 +30,10 @@ class StreamIn(Stream):
             return
         self.last_data = data
 
-        time.sleep(0.25)
+        #time.sleep(0.25)
         for ch in data:
             print(ch, end='', flush=True)
-            time.sleep(0.025)
+            #time.sleep(0.025)
         print()
 
 def json_load(something):
@@ -96,7 +96,7 @@ class TreeTalk:
             raise RuntimeError(f"TreeTalk: Failed to find current node {self.current}")
 
         node = self.definition[self.current]
-        if node["type"] == "start":
+        if node["type"] == "directive":
             return self.resolve_directive(node["directive"])
 
         elif node["type"] == "dialogue":

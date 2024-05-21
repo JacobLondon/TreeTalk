@@ -1,6 +1,6 @@
 {
     "::START": {
-        "type": "start",
+        "type": "directive",
         "directive": "::GOTO A1"
     },
     "::INCLUDE": [

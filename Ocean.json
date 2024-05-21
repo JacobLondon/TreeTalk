@@ -1,0 +1,126 @@
+{
+    "::START": {
+        "type": "directive",
+        "directive": "::GOTO Intro"
+    },
+    "::INCLUDE": [
+        "Ocean"
+    ],
+    "Intro": {
+        "__comment__": "This is definitely a fanfic of Tress of the Emerald Sea.",
+        "type": "dialogue",
+        "dialogue": [
+            "Once, long ago there was the ocean full of spores.",
+            "It was quite a different place, actually. Not just",
+            "a long time ago.",
+            "Regardless, this far away place in a time long ago",
+            "there was a writhing ocean of spores that sailors",
+            "would go about travelling on. On their ships they",
+            "brought cargo of spices, jewelry, food, rare timber,",
+            "and many various other luxurious items that folks",
+            "would want to decorate their homes with.",
+            "Now, these boats were different from what we are",
+            "familiar with since they sail on spores and not",
+            "water, as you or I would be more familiar with.",
+            "On one such ship called the Sea Springer, the Captain",
+            "Rosenheart would order her sailors about to make",
+            "good time between the various islands in the spore",
+            "ocean.",
+            "'Quickly now!' the Rosenheart shouted, 'The spores",
+            "will settle and stop us before we get to Short Rock!'",
+            "::GOTO Intro.Response"
+        ]
+    },
+    "Intro.Response": {
+        "type": "msg",
+        "msg": "Select your choice:\n(1) Yes captain!\n(2) <grunt at the extra work>\n(3) <say nothing>",
+        "opt": {
+            "1": "::GOTO Intro.Response.Agree",
+            "2": "::GOTO Intro.Response.Grunt",
+            "3": "::GOTO Intro.Continue"
+        }
+    },
+
+    "Intro.Response.Agree": {
+        "type": "dialogue",
+        "dialogue": [
+            "Rosenheart: Good to hear Scout!",
+            "::GOTO Intro.Continue"
+        ]
+    },
+    "Intro.Response.Grunt": {
+        "type": "dialogue",
+        "dialogue": [
+            "<You see Rosenheart is startled by your choice of response>",
+            "<Rosenheart turns towards you and stomps over to your deck",
+            " the rest of the crew watches nervously as she makes her way",
+            " towards you>",
+            "<Rosenheart looks into your eyes at about an arm's length away>",
+            "'What did I hear Scout?' Rosenheart says icily.",
+            "::GOTO Intro.Response.PissedOff"
+        ]
+    },
+    "Intro.Response.PissedOff": {
+        "type": "msg",
+        "msg": "(1) N'n-nothing Captain\n(2) We're almost to Short Rock where we can rest. We don't need to overwork.\n(3) <say nothing>",
+        "opt": {
+            "1": "::GOTO Intro.Response.PissedWhatIThought",
+            "2": "::GOTO Intro.Response.StirringThePot",
+            "3": "::GOTO Intro.Response.PissedWhatIThought"
+        }
+    },
+    "Intro.Response.PissedWhatIThought": {
+        "type": "dialogue",
+        "dialogue": [
+            "'Hm,' Rosenheart gives a small grin, 'That's what I thought.'",
+            "<Rosenheart turns but keeps eye contact with you for a moment",
+            " before fully turning and heading back up to the poopdeck>",
+            "::GOTO Intro.Continue"
+        ]
+    },
+    "Intro.Response.StirringThePot": {
+        "type": "dialogue",
+        "dialogue": [
+            "'Overwork? Scout,' Rosenheart panned, 'All waters should be considered",
+            "unsafe. Be it for the witch that haunts the North or the dragon the East,",
+            "or be it pirates that patrol everywhere in between. The last thing we",
+            "need is for the spores to take our ship, our barrels of fine spices and",
+            "wines, and our lives.'",
+            "",
+            "*it doesn't seem quite fair, because as you know, the only real threat",
+            "on the waters is pirates, and they would never come close enough to a",
+            "shore to be spotted and identified since piracy was deemed by the King",
+            "to be quite illegal*",
+            "::GOTO Intro.Response.ThePotDecision"
+        ]
+    },
+    "Intro.Response.ThePotDecision": {
+        "type": "msg",
+        "msg": "(1) I'm sorry Captain, you're right\n(2) You know just as well as I that pirates would never come so close to a port authority, the King would never allow it!",
+        "opt": {
+            "1": "::GOTO Intro.Response.PissedWhatIThought",
+            "2": "::GOTO Intro.Response.MaybeSoIThought"
+        }
+    },
+    "Intro.Response.MaybeSoIThought": {
+        "type": "dialogue",
+        "dialogue": [
+            "'Maybe so Scout, but I worry for our own sakes. <Rosenheart continues quietly>",
+            "You're damn good for our crew Scout. I don't need you questioning me in front",
+            "of the whole crew--I see so much potential in you, and we'll need the whole",
+            "crew on-board with us for what's to come.'",
+            "<Rosenheart turns on her heel looks up to the whole crew>",
+            "'All right you scallywags! To Short Rock!'",
+            "'AYE CAPTAIN,' the whole crew shouts.",
+            "::GOTO Intro.Continue"
+        ]
+    },
+
+    "Intro.Continue": {
+        "type": "dialogue",
+        "dialogue": [
+            "Onwards sailors! We approach Short Rock without a pirate in sight!",
+            "::QUIT"
+        ]
+    }
+}
